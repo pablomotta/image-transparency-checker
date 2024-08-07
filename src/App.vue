@@ -1,12 +1,12 @@
 <template>
-  <div class="flex flex-col items-center">
-    <div class="relative">
+  <div class="flex flex-col items-center bg-stone-700 h-screen">
+    <div class="relative bg-white">
       <canvas ref="canvas" class="hidden"></canvas>
       <img
         :src="currentImage"
         :class="imageHasTransparency ? 'px-8' : 'px-0'"
         alt="current"
-        class="transition-all"
+        class="transition-all h-72"
       />
       <p class="text-center mt-2">
         {{ imageHasTransparency ? 'Image has transparent background' : 'Image has no transparent background' }}
@@ -23,9 +23,9 @@ export default {
   data() {
     return {
       images: [
-        'https://example.com/image1.png',
-        'https://example.com/image2.png',
-        'https://example.com/image3.png'
+        'https://cdn.shopify.com/s/files/1/0279/6712/7636/files/Nav_FightClub_Mobile.jpg?v=1720551583',
+        'https://cdn.shopify.com/s/files/1/0279/6712/7636/files/Mosaic_Tile_4_896e51da-4eb1-407c-b48f-df89fafc3851.png?v=1720551583',
+        'https://cdn.shopify.com/s/files/1/0279/6712/7636/files/OurStoryNav_BCorp_Mobile.jpg?v=1720551583'
       ],
       currentIndex: 0,
       imageHasTransparency: false
